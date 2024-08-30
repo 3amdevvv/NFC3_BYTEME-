@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap');
+
+:root {
+  --color-purple-700: #6D28D9;
+  --color-indigo-900: #312E81;
+  --color-purple-300: #C4B5FD;
+}
+
+.font-moo-lah-lah {
+  font-family: 'Moo Lah Lah', cursive;
+}
+
+.bg-gradient-custom {
+  background: linear-gradient(to bottom right, var(--color-purple-700), var(--color-indigo-900));
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}

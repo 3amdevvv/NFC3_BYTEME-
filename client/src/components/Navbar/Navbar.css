@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+  --color-purple-300: #d8b4fe;
+  --color-purple-400: #c084fc;
+  --color-purple-900: #581c87;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+.nav-blur {
+  backdrop-filter: blur(8px);
+  background-color: rgba(88, 28, 135, 0.1); /* Adjust the color and opacity as needed */
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-open {
+    height: 100vh;
+    overflow: hidden;
+  }
+}

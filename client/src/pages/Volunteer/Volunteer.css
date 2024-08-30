@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Moo+Lah+Lah&family=Nunito:wght@200..900&display=swap');
+
+:root {
+  --color-dark-green: #d6c8e6;
+  --color-light-green: #e2dbe9;
+  --color-mid-green: #ede7f5;
+}
+
+html {
+  font-size: 16px;
+}
+
+.volunteer-page {
+  background-color: var(--color-light-green);
+  min-height: 100vh;
+  padding: 1.25rem;
+}
+
+.volunteer-content {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.volunteer-page-title {
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.volunteer-section-title {
+  font-size: 2rem;
+  color: var(--color-dark-green);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+.opportunities-title{
+  margin-top: 1.5rem;
+}
+
+.make-difference {
+  margin-bottom: 3rem;
+  background-color: var(--color-dark-green);
+  padding: 2rem;
+  border-radius: 0.625rem;
+}
+
+.difference-title {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.difference-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.difference-item {
+  font-size: 1.1rem;
+  color: var(--color-light-green);
+  line-height: 1.6;
+  color: white !important;
+}
+
+.difference-item strong {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.quote {
+  font-style: italic;
+  text-align: center;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: var(--color-light-green);
+  border-radius: 0.625rem;
+}
+
+.opportunities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.opportunity {
+  background-color: var(--color-dark-green);
+  color: var(--color-light-green);
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.opportunity h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #49f13d;
+}
+
+.opportunity p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  color: #c4f3c0;
+  flex-grow: 1;
+}
+
+.volunteering-process {
+  margin-top: 2rem;
+}
+
+.process-list {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.process-list li {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.volunteer-button {
+  background-color: var(--color-dark-green);
+  color: var(--color-light-green);
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.volunteer-button:hover {
+  background-color: var(--color-mid-green);
+  color: var(--color-dark-green);
+}
+
+.custom-hr {
+  margin: 3rem 0;
+  border-bottom: 0.125rem solid var(--color-dark-green);
+  width: 35%;
+}
+
+.nuni {
+  font-family: 'Nunito', sans-serif;
+  color: white;
+}
+.opportunity p{
+  margin-top: 0.5rem;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1.25rem;
+  }
+
+  .navbar-left, .navbar-center, .navbar-right {
+    width: 100%;
+    margin-bottom: 0.625rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .volunteer-page-title {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .make-difference {
+    padding: 1.5rem;
+  }
+
+  .difference-item strong {
+    font-size: 1.1rem;
+  }
+
+  .quote {
+    font-size: 1.1rem;
+  }
+
+  .opportunities {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Righteous&display=swap');
+
+.benefits {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.nuni {
+    font-family: "Nunito", sans-serif;
+}
+
+@media (max-width: 768px) {
+    .benefits {
+        padding: 2rem 1rem;
+    }
+
+    .intro {
+        margin: 1.5rem 1rem;
+    }
+}

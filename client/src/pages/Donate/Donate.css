@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Moo+Lah+Lah&family=Nunito:wght@200..900&display=swap');
+
+:root {
+  --color-dark-green: #163225;
+  --color-light-green: #a3f79d;
+  --color-mid-green: #50e446;
+}
+
+.donate-page {
+  background-color: var(--color-light-green);
+  min-height: 100vh;
+  padding: 1.25rem;
+}
+
+.donate-content {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.donate-page-title {
+  font-size: 3rem;
+  color: var(--color-dark-green);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.donate-section-title {
+  font-size: 2rem;
+  color: var(--color-dark-green);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.donate-intro {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.donate-text {
+  flex: 1;
+}
+
+.donate-image {
+  flex: 1;
+}
+
+.donate-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.625rem;
+}
+
+.donate-quote {
+  font-style: italic;
+  color: var(--color-dark-green);
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.625rem;
+}
+
+.donation-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.donation-option {
+  background-color: var(--color-dark-green);
+  color: var(--color-light-green);
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+  text-align: center;
+}
+
+.donation-option h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #49f13d;
+}
+
+.donate-button {
+  background-color: var(--color-mid-green);
+  color: var(--color-dark-green);
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.donate-button:hover {
+  background-color: var(--color-light-green);
+}
+
+.impact-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.impact-item {
+  flex: 1;
+  min-width: 10rem;
+  text-align: center;
+  background-color: var(--color-dark-green);
+  color: var(--color-light-green);
+  padding: 1rem;
+  border-radius: 0.625rem;
+}
+
+.impact-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #49f13d;
+}
+
+.other-ways {
+  margin-top: 3rem;
+}
+
+.other-ways ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+.custom-hr {
+  margin: 3rem 0;
+  border-bottom: 0.125rem solid var(--color-dark-green);
+  width: 35%;
+}
+
+.nuni {
+  font-family: 'Nunito', sans-serif;
+  text-decoration-color: wheat;
+}
+
+@media (max-width: 47.9375rem) {
+  .donate-intro {
+    flex-direction: column;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .impact-section {
+    flex-direction: column;
+  }
+}

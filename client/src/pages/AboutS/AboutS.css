@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Moo+Lah+Lah&family=Nunito:wght@200..900&display=swap');
+
+:root {
+  --color-dark-green: #024023;
+  --color-light-green: #a3f79d;
+  --color-mid-green: #50e446;
+}
+
+html {
+  font-size: 1rem;
+}
+
+.about-page {
+  background-color: var(--color-light-green);
+  min-height: 100vh;
+  padding: 1.25rem;
+  overflow-x: hidden;
+}
+
+.about-content {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.abouts-page-title {
+  font-size: 3rem;
+  color: var(--color-dark-green);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.abouts-section-title {
+  font-size: 2rem;
+  color: var(--color-dark-green);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.shelter img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.625rem;
+}
+.shelter{
+  padding: 2rem;
+}
+.team-members {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-member {
+  flex: 1;
+  min-width: 15.625rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  background-color: white !important;
+}
+
+.team-member img {
+  width: 12.375rem;
+  height: 12.375rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.ngo-info {
+  margin-top: 2rem;
+}
+
+.ngo-info ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.custom-hr {
+  margin: 3rem 0;
+  border-bottom: 0.125rem solid var(--color-dark-green);
+  width: 35%;
+}
+
+.nuni {
+  font-family: 'Nunito', sans-serif;
+  color: white;
+}
+
+.upper {
+  font-family: "Source Serif 4", sans-serif;
+  color: #adadc7;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.member-intro {
+  font-weight: 400;
+}
+
+.member-name {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 48rem) {
+  .text {
+    flex-direction: row;
+  }
+
+  .left, .shelter {
+    flex: 1;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.8s ease-in-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 0.8s ease-in-out forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.team-member.animate {
+  animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 0;
+}
+
+.team-member:nth-child(1) { animation-delay: 0.1s; }
+.team-member:nth-child(2) { animation-delay: 0.3s; }
+.team-member:nth-child(3) { animation-delay: 0.5s; }

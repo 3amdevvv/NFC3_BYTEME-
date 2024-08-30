@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Moo+Lah+Lah&family=Nunito:wght@200..900&display=swap');
+
+:root {
+  --color-dark-green: #024023;
+  --color-light-green: #a3f79d;
+  --color-mid-green: #50e446;
+}
+
+.adoption-process-page {
+  background-color: var(--color-light-green);
+  min-height: 100vh;
+  padding: 1.25rem;
+}
+
+.adoption-process-content {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.page-title {
+  font-size: 3rem;
+  color: var(--color-dark-green);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--color-dark-green);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.process-image {
+  margin-bottom: 2rem;
+}
+
+.process-image img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 0.625rem;
+}
+
+.process-steps {
+  background-color: var(--color-dark-green);
+  color: var(--color-light-green);
+  padding: 2rem;
+  border-radius: 0.625rem;
+  margin-bottom: 2rem;
+}
+
+.step {
+  margin-bottom: 1.5rem;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  color: #49f13d;
+  margin-bottom: 0.5rem;
+}
+
+.additional-info {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+  border-radius: 0.625rem;
+}
+
+.additional-info ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+.additional-info li {
+  margin-bottom: 1rem;
+}
+
+.nuni {
+  font-family: 'Nunito', sans-serif;
+}
+
+@media (max-width: 47.9375rem) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .step-title {
+    font-size: 1.3rem;
+  }
+}

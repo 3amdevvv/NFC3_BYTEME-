@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Righteous&display=swap');
+
+.events-campaigns {
+    font-family: "Nunito", sans-serif;
+}
+
+.event-card, .campaign-card {
+    transition: all 0.3s ease;
+}
+
+.event-card:hover, .campaign-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .events-campaigns {
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
