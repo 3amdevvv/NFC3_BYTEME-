@@ -20,7 +20,7 @@ const Adopt = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Replace with your backend URL
-        axios.post('http://localhost:5000/adoption-form', formData)
+        axios.post(`${import.meta.env.BACKEND_URI}/adoption-form`, formData)
             .then(response => {
                 console.log('Form submitted successfully:', response.data);
             })

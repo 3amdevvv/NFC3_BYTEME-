@@ -12,7 +12,7 @@ function UserProfile() {
         const fetchUserProfile = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const details = await fetch('http://localhost:5000/api/auth/userprofile', {
+                const details = await fetch(`${import.meta.env.BACKEND_URI}/api/auth/userprofile`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

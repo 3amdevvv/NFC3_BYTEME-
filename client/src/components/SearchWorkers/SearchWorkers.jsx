@@ -14,7 +14,7 @@ function SearchWorkers() {
   useEffect(() => {
     const fetchWorkers = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/auth/getusers');
+        const response = await fetch(`${import.meta.env.BACKEND_URI}/api/auth/getusers`);
         if (!response.ok) {
           throw new Error(`Failed to fetch workers: ${response.status}`);
         }

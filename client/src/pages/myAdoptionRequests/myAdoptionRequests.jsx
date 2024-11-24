@@ -60,7 +60,7 @@ function MyAdoptionRequests() {
   const fetchRequests = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/forms/myReq', {
+      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/forms/myReq`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

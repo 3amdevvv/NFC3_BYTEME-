@@ -44,7 +44,7 @@ function AllPets() {
 
   const fetchPets = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/pets/');
+      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/pets/`);
       if (!response.ok) {
         throw new Error('Failed to fetch pets');
       }
@@ -101,7 +101,7 @@ function AllPets() {
   const handleDeletePet = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/pets/${id}`, {
+      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/pets/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

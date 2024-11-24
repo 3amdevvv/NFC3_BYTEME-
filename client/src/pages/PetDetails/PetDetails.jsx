@@ -25,7 +25,7 @@ function PetDetails() {
   useEffect(() => {
     const fetchPetDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/pets/${id}`);
+        const response = await fetch(`${import.meta.env.BACKEND_URI}/api/pets/${id}`);
         if (!response.ok) {
           throw new Error('Pet not found');
         }

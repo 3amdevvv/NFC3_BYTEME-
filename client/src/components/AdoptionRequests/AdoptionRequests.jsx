@@ -46,7 +46,7 @@ function AdoptionRequests() {
       const decodedToken = jwtDecode(token);
       const userId = decodedToken.user.id;
 
-      const response = await fetch('http://localhost:5000/api/forms/getAdoptionData', {
+      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/forms/getAdoptionData`, {
         headers: {
           'Content-Type': 'application/json',
           'x-auth-token': token

@@ -22,7 +22,7 @@ function EditUser() {
   const fetchUserDetails = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/auth/userprofile`, {
+      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/auth/userprofile`, {
         headers: {
           'x-auth-token': token
         }
@@ -49,7 +49,7 @@ function EditUser() {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/auth/edituser`, {
+      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/auth/edituser`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

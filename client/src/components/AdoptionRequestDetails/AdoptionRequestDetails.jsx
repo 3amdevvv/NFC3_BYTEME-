@@ -105,7 +105,7 @@ function AdoptionRequestDetails() {
         throw new Error('Failed to fetch request details');
       }
 
-      const response = await fetch(`http://localhost:5000/api/forms/${id}`, {
+      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/forms/${id}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -125,7 +125,7 @@ function AdoptionRequestDetails() {
         navigate('/');
         throw new Error('Authorization token is missing');
       }
-      const response = await fetch(`http://localhost:5000/api/forms/approve/${isNGOWorker ? 'ngo' : 'admin'}/${id}`, {
+      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/forms/approve/${isNGOWorker ? 'ngo' : 'admin'}/${id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -153,7 +153,7 @@ function AdoptionRequestDetails() {
         throw new Error('Authorization token is missing');
       }
 
-      const response = await fetch(`http://localhost:5000/api/forms/reject/${id}`, {
+      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/forms/reject/${id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
