@@ -166,15 +166,10 @@ function Signup() {
                 value={formData.number}
                 onChange={handleInputChange}
                 required
+                style={{
+                  width : "100%"
+                }}
               />
-              <button
-                type="button"
-                onClick={sendOTP}
-                className="send-otp-button"
-                disabled={otpSent}
-              >
-                {otpSent ? 'OTP Sent' : 'Send OTP'}
-              </button>
             </div>
           </div>
           {otpSent && (
