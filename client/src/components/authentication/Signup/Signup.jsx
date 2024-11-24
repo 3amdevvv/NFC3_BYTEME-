@@ -17,7 +17,7 @@ function Signup() {
   });
   const [submitting, setSubmitting] = useState(false);
   const [otpSent, setOtpSent] = useState(false);
-  const [otpVerified, setOtpVerified] = useState(false);
+  const [otpVerified, setOtpVerified] = useState(true);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const navigate = useNavigate();
 
@@ -188,14 +188,6 @@ function Signup() {
                 onChange={handleInputChange}
                 required
               />
-              <button
-                type="button"
-                onClick={verifyOTP}
-                className="verify-otp-button"
-                disabled={otpVerified}
-              >
-                {otpVerified ? 'Verified' : 'Verify OTP'}
-              </button>
             </div>
           )}
           <div className="form-group">
