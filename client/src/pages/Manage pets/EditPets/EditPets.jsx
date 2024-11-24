@@ -24,7 +24,7 @@ function EditPets() {
 
   const fetchPetDetails = async () => {
     try {
-      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/pets/${id}`);
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URI}/api/pets/${id}`);
       if (!response.ok) {
         throw new Error('Failed to fetch pet details');
       }
@@ -73,7 +73,7 @@ function EditPets() {
         formData.append('photo', newPhoto);
       }
 
-      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/pets/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URI}/api/pets/${id}`, {
         method: 'PUT',
         headers: {
           'x-auth-token': token

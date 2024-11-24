@@ -15,7 +15,7 @@ function ChatList({ onClose }) {
   const fetchChatRequests = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/chat/requests`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URI}/api/chat/requests`, {
         headers: {
           'x-auth-token': localStorage.getItem('token')
         }

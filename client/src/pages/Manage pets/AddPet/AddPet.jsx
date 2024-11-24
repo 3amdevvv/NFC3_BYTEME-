@@ -46,7 +46,7 @@ function AddPet() {
         formData.append('photo', photo);
       }
 
-      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/pets/`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URI}/api/pets/`, {
         method: 'POST',
         headers: {
           'x-auth-token': token

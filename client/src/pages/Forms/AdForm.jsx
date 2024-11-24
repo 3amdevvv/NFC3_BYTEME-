@@ -51,7 +51,7 @@ function AdForm() {
     try {
       const token = localStorage.getItem('token');
 
-      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/forms/`, { 
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URI}/api/forms/`, { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ function AdForm() {
       if (!response.ok) {
         throw new Error('Failed to submit form');
       }
-      const smsResponse = await fetch(`${import.meta.env.BACKEND_URI}/api/sms/send-adoption-sms`, {
+      const smsResponse = await fetch(`${import.meta.env.VITE_BACKEND_URI}/api/sms/send-adoption-sms`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -33,7 +33,7 @@ function Signup() {
     }
 
     try {
-      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/auth/send-otp`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URI}/api/auth/send-otp`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ function Signup() {
 
   const verifyOTP = async () => {
     try {
-      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/auth/verify-otp`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URI}/api/auth/verify-otp`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ function Signup() {
       return;
     }
 
-    const url = `${import.meta.env.BACKEND_URI}/api/auth/signup`;
+    const url = `${import.meta.env.VITE_BACKEND_URI}/api/auth/signup`;
 
     try {
       const response = await fetch(url, {

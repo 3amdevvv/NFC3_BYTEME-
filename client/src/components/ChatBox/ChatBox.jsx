@@ -24,7 +24,7 @@ function ChatBox({ request, onClose }) {
       fetchRequestDetails(request._id);
       fetchMessages(request._id);
 
-      socketRef.current = io(`${import.meta.env.BACKEND_URI}`);
+      socketRef.current = io(`${import.meta.env.VITE_BACKEND_URI}`);
       socketRef.current.emit('join chat', request._id);
 
       socketRef.current.on('new message', (message) => {
@@ -47,7 +47,7 @@ function ChatBox({ request, onClose }) {
   const fetchRequestDetails = async (requestId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/forms/${requestId}`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URI}/api/forms/${requestId}`, {
         headers: { 'x-auth-token': token }
       });
       if (!response.ok) throw new Error('Failed to fetch request details');
@@ -73,7 +73,7 @@ function ChatBox({ request, onClose }) {
   const fetchMessages = async (requestId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`${import.meta.env.BACKEND_URI}/api/chat/requests/${requestId}/messages`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URI}/api/chat/requests/${requestId}/messages`, {
         headers: { 'x-auth-token': token }
       });
       if (!response.ok) throw new Error('Failed to fetch messages');

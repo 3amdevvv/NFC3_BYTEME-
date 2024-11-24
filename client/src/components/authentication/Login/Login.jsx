@@ -21,7 +21,7 @@ function Login() {
     setSubmitting(true);
     setErrorMessage('');
 
-    const url = `${import.meta.env.BACKEND_URI}/api/auth/login`;
+    const url = `${import.meta.env.VITE_BACKEND_URI}/api/auth/login`;
 
     try {
       const response = await fetch(url, {
